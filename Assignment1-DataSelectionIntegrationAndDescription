@@ -1,31 +1,32 @@
-Describe your data(10pts)
-Write a paragraph or create a table describing your data source, one shuld consider the following:
-
-When was the data collected? (1pts):
+Deliverable 1:Data Selection Integration and Description
+Instructions: Choose a dataset. Use a source of your choice or one of the data repositories or sources which were discussed in this class to obtain data which you will be mining for your final project. You may integrate information/data from several sources to develop your final analytic dataset or you may choose to work with one dataset, this largely depends on your requirements.
+Describe your data (Total of 10 pts): Write a paragraph or create a table describing your data source, one should consider the following:
+When was the data collected? (1 pts)
 The data was collected in 2013
-
-Who collected the data? (1pts):
+Who collected the data? (1 pts)
 The data was collected by the 'United States Department of Health and Human Services. Substance Abuse and Mental Health Services Administration. Center for Behavioral Health Statistics and Quality'
 
-For what purpose was the data initially collected? (2pts):
+For what purposes was the data initially collected? (2 pts)
 The data was collected to primarily measure the prevalence and correlates of drug use in the United States.
 
-What is the context and content of the data, what dimensions/attributes does it describe? (Is it spatial data, we log data, transaction data, survey data or health data...)? (2pts):
-The survey data provides information on the use of illicit drugs, alcohol and tobacco among members of United States households aged 12 and older. Questions included age at first use as well as lifetime, annual, and past-month usage for the following drug classes: marijuana, cocaine (and crack), hallucinogens, heroin, inhalants, alcohol, tobacco, and nonmedical use of prescription drugs, including pain relievers, tranquilizers, stimulants, and sedatives. The survey covered substance abuse treatment history and perceived need for treatment, and included questions from the Diagnostic and Statistical Manual (DSM) of Mental Disorders that allow diagnostic criteria to be applied. The survey included questions concerning treatment for both substance abuse and mental health-related disorders. Respondents were also asked about personal and family income sources and amounts, health care access and coverage, illegal activities and arrest record, problems resulting from the use of drugs, and needle-sharing. Questions introduced in previous administrations were retained in the 2013 survey, including questions asked only of respondents aged 12 to 17. These "youth experiences" items covered a variety of topics, such as neighborhood environment, illegal activities, drug use by friends, social support, extracurricular activities, exposure to substance abuse prevention and education programs, and perceived adult attitudes toward drug use and activities such as school work. Several measures focused on prevention-related themes in this section. Also retained were questions on mental health and access to care, perceived risk of using drugs, perceived availability of drugs, driving and personal behavior, and cigar smoking. Questions on the tobacco brand used most often were introduced with the 1999 survey. For the 2008 survey, adult mental health questions were added to measure symptoms of psychological distress in the worst period of distress that a person experienced in the past 30 days and suicidal ideation. In 2008, a split-sample design also was included to administer separate sets of questions (WHODAS vs. SDS) to assess impairment due to mental health problems. Beginning with the 2009 NSDUH, however, all of the adults in the sample received only the WHODAS questions. Background information includes gender, race, age, ethnicity, marital status, educational level, job status, veteran status, and current household composition.
 
-How big is the data, number of rows and columns? (2 pts)
-The data contains 55160 rows (survey respondents) and 3141 columns (survey questions)
+What is the context and content of the data, what dimensions/attributes does it describe? (Is it spatial data, we log data, transaction data, survey data or health data...)? (2 pts)
+The survey data provides information on the use of illicit drugs, alcohol, and tobacco among members of United States households aged 12 and older. Questions included age at first use as well as lifetime, annual, and past-month usage for the following drug classes: marijuana, cocaine (and crack), hallucinogens, heroin, inhalants, alcohol, tobacco, and nonmedical use of prescription drugs, including pain relievers, tranquilizers, stimulants, and sedatives. The survey covered substance abuse treatment history and perceived need for treatment and included questions from the Diagnostic and Statistical Manual (DSM) of Mental Disorders that allow diagnostic criteria to be applied. The survey included questions concerning treatment for both substance abuse and mental health-related disorders. Respondents were also asked about personal and family income sources and amounts, health care access and coverage, illegal activities and arrest records, problems resulting from the use of drugs, and needle-sharing, neighborhood environment, illegal activities, drug use by friends, social support, extracurricular activities, exposure to substance abuse prevention and education programs, and perceived adult attitudes toward drug use and activities such as schoolwork, mental health and access to care, perceived risk of using drugs, perceived availability of drugs, driving, and personal behavior, and cigar smoking, adult mental health. Background information includes gender, race, age, ethnicity, marital status, educational level, job status, veteran status, and current household composition.
+How big is your data, number of rows and columns? (2 pts)
+ The data contains 55160 rows (survey respondents) and 3141 columns (survey questions)
+Discuss the quality of your data, how complete is it? Are there any known sources of errors or biases? (2 pts)
 
-Discuss the quality of your data, how complete is it? Are there and known sources of errors or biases? (2 pts)
-There are no null values in the data set, however for some selected variables statistical imputation was performed following logical inference to replace missing responses. The names of the statistically imputed variable begin with the letters 'IR'. Missing values for some demographic variables were imputed by the unweighted hot-deck technique.
+There are no null values in the data set, however, for some selected variables, statistical imputation was performed following logical inference to replace missing responses. The names of the statistically imputed variable begin with the letters 'IR'. Missing values for some demographic variables were imputed by the unweighted hot-deck technique.
 The data set contains the following codes for missing/refused values for questions and and have the same (or consistent) meaning across all variables:
- 94 or 994 or 9994, etc. = DON'T KNOW
- 97 or 997 or 9997, etc. = REFUSED
- 98 or 998 or 9998, etc. = BLANK (i.e., not answered; not asked the question)
- 99 or 999 or 9999, etc. = LEGITIMATE SKIP
- 85 (or 985, 9985, etc.) = BAD DATA Logically assigned (i.e., usually inconsistent with other data)
- 89 (or 989, or 9989, etc.) = LEGITIMATE SKIP Logically assigned
+ 94 or 994 or 9994, etc.    =     DON'T KNOW
+ 97 or 997 or 9997, etc.    =     REFUSED
+ 98 or 998 or 9998, etc.    =     BLANK (i.e., not answered; not asked the question)
+ 99 or 999 or 9999, etc.    =     LEGITIMATE SKIP
+ 85 (or 985, 9985, etc.)     =     BAD DATA Logically assigned (i.e., usually inconsistent with other data)
+ 89 (or 989, or 9989, etc.) =     LEGITIMATE SKIP Logically assigned
 
 
 References
 United States Department of Health and Human Services. Substance Abuse and Mental Health Services Administration. Center for Behavioral Health Statistics and Quality. National Survey on Drug Use and Health, 2013. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2015-11-23. https://doi.org/10.3886/ICPSR35509.v3
+
+

@@ -17,7 +17,7 @@ How big is your data, number of rows and columns? (2 pts)
 Discuss the quality of your data, how complete is it? Are there any known sources of errors or biases? (2 pts)
 
 There are no null values in the data set, however, for some selected variables, statistical imputation was performed following logical inference to replace missing responses. The names of the statistically imputed variable begin with the letters 'IR'. Missing values for some demographic variables were imputed by the unweighted hot-deck technique.
-The data set contains the following codes for missing/refused values for questions and and have the same (or consistent) meaning across all variables:
+The data set contains the following codes for missing/refused values for questions and have the same (or consistent) meaning across all variables:
  94 or 994 or 9994, etc.    =     DON'T KNOW
  97 or 997 or 9997, etc.    =     REFUSED
  98 or 998 or 9998, etc.    =     BLANK (i.e., not answered; not asked the question)

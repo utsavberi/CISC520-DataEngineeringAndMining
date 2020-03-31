@@ -5,12 +5,14 @@ import pandas as pd
 def cleanData(arrdf):
     # print([((arrdf != 4) & (arrdf!=225))])
     return arrdf[(
-            (arrdf % 100 != 93)
-            & (arrdf % 100 != 94)
-            & (arrdf % 100 != 97)
-            & (arrdf % 100 != 98)
-            & (arrdf % 100 != 99)
-            & (arrdf % 100 != 83)
+            # (arrdf % 100 != 93)
+            # &
+            # (arrdf % 100 != 94)
+            # &
+            (arrdf % 100 != 97)
+            # & (arrdf % 100 != 98)
+            # & (arrdf % 100 != 99)
+            # & (arrdf % 100 != 83)
             & (arrdf % 100 != 85)
 
     )].dropna()
@@ -32,6 +34,7 @@ arr = np.array([
     [9988888, 3, 4],
     [6, 295, 99999998]
 ])
+
 
 # missing = [arr > 10]
 # print(arr)

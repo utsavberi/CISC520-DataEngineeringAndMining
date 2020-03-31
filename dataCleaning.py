@@ -1,15 +1,36 @@
 import numpy as np
 import pandas as pd
 
+
 def cleanData(arrdf):
     # print([((arrdf != 4) & (arrdf!=225))])
-    return arrdf[((arrdf % 100 !=25) & (arrdf % 100 !=95))].dropna()
+    return arrdf[(
+            (arrdf % 100 != 93)
+            & (arrdf % 100 != 94)
+            & (arrdf % 100 != 97)
+            & (arrdf % 100 != 98)
+            & (arrdf % 100 != 99)
+            & (arrdf % 100 != 83)
+            & (arrdf % 100 != 85)
+
+    )].dropna()
+
 
 arr = np.array([
     [1, 2, 3],
     [4, 5, 625],
     [225, 3, 4],
-    [6, 295, 8]
+    [225, 3, 4],
+    [225, 97, 4],
+    [225, 3, 4],
+    [99997, 3, 4],
+    [225, 3, 4],
+    [225, 3, 4],
+    [225, 98, 4],
+    [225, 3, 4],
+    [225, 3, 4],
+    [9988888, 3, 4],
+    [6, 295, 99999998]
 ])
 
 # missing = [arr > 10]
@@ -28,7 +49,6 @@ print(cleanData(df))
 # print(np.where((df % 100 != 25) ))
 # arrdf =  np.delete(df, df[np.logical_or.reduce((df % 100 != 25) , (df %10!=3), (df %10!=3))])
 # print(df)
-
 
 
 # ar = np.array([20,44,55,6,7])

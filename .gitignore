@@ -1,0 +1,5 @@
+venv/*
+venv1/*
+.idea
+/.idea/*s
+*.imld

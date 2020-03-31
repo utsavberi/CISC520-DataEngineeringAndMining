@@ -3,3 +3,4 @@ venv1/*
 .idea
 /.idea/*s
 *.imld
+data/ICPSR_35509/DS0001/35509-0001-Data.tsv

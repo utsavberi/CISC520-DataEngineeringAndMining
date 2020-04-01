@@ -78,6 +78,7 @@ start = time.time()
 gmm = GaussianMixture(n_components=2)
 gmm.fit(X_pca)
 y = gmm.predict(X_pca)
+np.savetxt('pca_data_no_missing_full_clusters', y)
 #
 end = time.time()
 print(end - start)

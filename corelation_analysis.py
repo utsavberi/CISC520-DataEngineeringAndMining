@@ -9,31 +9,118 @@ from scipy.stats import kendalltau
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing
+import statsmodels.api as sm
+from scipy import stats
 
-# df_train = pd.read_csv('data/ICPSR_35509/DS0001/35509-0001-Data.tsv', delimiter='\t', encoding='utf-8') # shape (55160, 3141)
-df_train = pd.read_csv('data_tail_5000.csv')
+df_train = pd.read_csv('data/ICPSR_35509/DS0001/35509-0001-Data.tsv', delimiter='\t', encoding='utf-8') # shape (55160, 3141)
+# df_train = pd.read_csv('data_tail_5000.csv')
 
+#
+# '''
+# gender -> booked for crime
+# '''
+# #cleaning
+# df_train.BOOKED.replace([3,85,94,97,98],[1, None, None, None, None], inplace=True)
+# df_train.dropna(inplace=True)
+#
+# # df_train.IRSEX.replace([2],[0], inplace=True)
+# # df_train.IRSEX.replace([1],[0], inplace=True)
+# # df_train.IRSEX.replace([2],[1], inplace=True)
+#
+# #corelation (odds ratio is better for binary variable)
+# y = df_train['BOOKED']
+# X = df_train['IRSEX']
+# print(kendalltau(X, y))
+#
+# clf = LogisticRegression(random_state=0)
+# clf.fit(np.array(X).reshape(-1, 1), y)
+# print('odds ratio')
+# print(np.exp(clf.coef_)) #odds ratio
+# print(clf.coef_) #relationship
+#
+#
+# # logit only accepts 0/1 as target values
+# df_train.BOOKED.replace([1,2],[0,1], inplace=True)
+# est = sm.Logit(y, X)
+# est2 = est.fit()
+# print(est2.summary())
+#
+# params = est2.params
+# conf = est2.conf_int()
+# conf['Odds Ratio'] = params
+# conf.columns = ['5%', '95%', 'Odds Ratio']
+# print(np.exp(conf))
+
+
+
+'''
+gender -> booked for property crime
+'''
 #cleaning
-df_train.BOOKED.replace([3,85,94,97,98],[1, None, None, None, None], inplace=True)
+df_train.BKLARCNY.replace([3,85,94,97,98, 99, 89],[1, None, None, None, None, None, None], inplace=True)
 df_train.dropna(inplace=True)
 
-# print(df_train.columns)
-##column
-##male/female=>IRSEX
-##arrested or booked for crime=>BOOKED
-# print(df_train['IRSEX'])
-# print(df_train['BOOKED'].unique())
-# print(df_train[['IRSEX','BOOKED']].corr(method='kendall'))
+# df_train.IRSEX.replace([2],[0], inplace=True)
+# df_train.IRSEX.replace([1],[0], inplace=True)
+# df_train.IRSEX.replace([2],[1], inplace=True)
 
-print(kendalltau(df_train['IRSEX'], df_train['BOOKED']))
+#corelation (odds ratio is better for binary variable)
+y = df_train['BKLARCNY']
+X = df_train['IRSEX']
+print(kendalltau(X, y))
+
 clf = LogisticRegression(random_state=0)
-clf.fit(df_train[['IRSEX']], df_train['BOOKED'])
-# print(np.exp(clf.coef_))
-# print(clf.intercept_)
-print(clf.coef_)
+clf.fit(np.array(X).reshape(-1, 1), y)
+print('odds ratio')
+print(np.exp(clf.coef_)) #odds ratio
+print(clf.coef_) #relationship
 
-# clf = LinearRegression()
-# clf.fit(df_train[['IRSEX']], df_train['BOOKED'])
-# print(np.exp(clf.coef_))
-# print(clf.intercept_)
-# print(clf.coef_)
+
+# logit only accepts 0/1 as target values
+df_train.BKLARCNY.replace([1,2],[0,1], inplace=True)
+est = sm.Logit(y, X)
+est2 = est.fit()
+print(est2.summary())
+
+params = est2.params
+conf = est2.conf_int()
+conf['Odds Ratio'] = params
+conf.columns = ['5%', '95%', 'Odds Ratio']
+print(np.exp(conf))
+
+# '''
+# age(NEWRACE2) -> booked
+# '''
+# #cleaning
+# df_train.BOOKED.replace([3,85,94,97,98],[1, None, None, None, None], inplace=True)
+# df_train.dropna(inplace=True)
+#
+# # df_train.IRSEX.replace([2],[0], inplace=True)
+# # df_train.IRSEX.replace([1],[0], inplace=True)
+# # df_train.IRSEX.replace([2],[1], inplace=True)
+#
+# #corelation (odds ratio is better for binary variable)
+# y = df_train['BOOKED']
+# X = df_train['NEWRACE2']
+# X.replace([2,3,4,5,6,7],[2,2,2,2,2,2],inplace=True)
+#
+# print(kendalltau(X, y))
+#
+# clf = LogisticRegression(random_state=0)
+# clf.fit(np.array(X).reshape(-1,1), y)
+# print('odds ratio')
+# print(np.exp(clf.coef_)) #odds ratio
+# print(clf.coef_) #relationship
+#
+#
+# # logit only accepts 0/1 as target values
+# df_train.BOOKED.replace([1,2],[0,1], inplace=True)
+# est = sm.Logit(y, X)
+# est2 = est.fit()
+# print(est2.summary())
+#
+# params = est2.params
+# conf = est2.conf_int()
+# conf['Odds Ratio'] = params
+# conf.columns = ['5%', '95%', 'Odds Ratio']
+# print(np.exp(conf))

@@ -92,13 +92,16 @@ COLDMEDS    0.152321
 '''
 # df_train.BOOKED.replace([3,85,94,97,98],[1, None, None, None, None], inplace=True)
 # df_train.BOOKED.replace([1,2],[0,1], inplace=True)
-df_train.NOBOOKY2.replace([2,3,985,994,997,998,999],[1,1,None,None,None,None,0], inplace=True)
+# df_train.NOBOOKY2.replace([2,3,985,994,997,998,999],[1,1,None,None,None,None,0], inplace=True)
 # df_train.BKSRVIOL.replace([85, 89, 94, 97, 98, 99], [None, None, None, None, None, None], inplace=True)
 # df_train.BKSRVIOL.replace([3, 2], [1, 0], inplace=True)
+df_train.DEPRSYR.replace([-9],[0], inplace=True)
 df_train.NEWRACE2.replace([2,3,4,5,6,7], [2,2,2,2,2,2], inplace=True)
 df_train.CATAG3.replace([1,5],[None,None], inplace=True)
-df_train.dropna(inplace=True)
-
+# df_train.dropna(inplace=True)
+# print(df_train.DEPRSYR.reshape((-1,1)))
+# print(df_train.DEPRSYR.shape)
+# print(df_train.DEPRSYR)
 
 def run(y, X, df_train):
     modelString = y.upper() + "~"
@@ -114,7 +117,7 @@ def run(y, X, df_train):
     print(model_odds)
 
 
-run('NOBOOKY2', ['SUMYR', 'IRSEX', 'educcat2', 'NEWRACE2', 'GOVTPROG', 'EMPSTATY'], df_train)
+run('DEPRSYR', ['SUMYR', 'IRSEX', 'educcat2', 'NEWRACE2', 'GOVTPROG', 'EMPSTATY'], df_train)
 # #model
 # # "BOOKED~ C(PSYYR2)+ C(IRSEX)+ C(EDUCCAT2)+ C(IRMARIT)+ C(CATAG3)+ C(NEWRACE2)+ C(GOVTPROG)+ C(EMPSTATY)+ C(HVYDRK2)+ C(MJOFLAG)+ C(SUMFLAG)"
 # model= smf.logit( formula="BKSRVIOL~ C(PSYYR2)+ C(IRSEX)+ C(EDUCCAT2)+ C(IRMARIT)+ C(CATAG3)+ C(NEWRACE2)+ C(EMPSTATY)+ C(MJOFLAG)+ C(SUMFLAG) ", data= df_train)\

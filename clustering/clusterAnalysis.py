@@ -1,11 +1,8 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
-import collections
-from dataCleaning import cleanData
+from clustering.dataCleaning import cleanData
 
 
 df_train = pd.read_csv('data/ICPSR_35509/DS0001/35509-0001-Data.tsv', delimiter='\t', encoding='utf-8') # shape (55160, 3141)

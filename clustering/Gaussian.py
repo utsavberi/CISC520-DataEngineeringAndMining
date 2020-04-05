@@ -1,17 +1,8 @@
-import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
 import collections
-import scipy.cluster.hierarchy as hier #do not remove
-from sklearn.cluster import AgglomerativeClustering
 import time
-from sklearn.cluster import DBSCAN
 from sklearn.mixture import GaussianMixture
-from dataCleaning import cleanData
-
 
 '''
 print('loading data')

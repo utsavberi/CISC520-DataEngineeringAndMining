@@ -1,0 +1,44 @@
+
+BOOKED~ C(PSYYR2)+ C(IRSEX)+ C(EDUCCAT2)+ C(IRMARIT)"
++ C(CATAG3)+ C(NEWRACE2)+ C(GOVTPROG)+ C(EMPSTATY)+ C(HVYDRK2)+ C(MJOFLAG)+ C(SUMFLAG)
+
+IVs
+most of these were imputed variables:
+PSYYR2 - any psychotherapics(Pain reliever(anlyr),  Sedatives(SEDYR), Stimulant(stmyr), Tranqualizers(TRQYR)) use in the last year - 0 no 1 yes
+IRSEX - gender - 1 male 2 female
+EDUCCAT2 - education - 1: less than high school; 2: high school graduate; 3: some college; 4:college graduate, 5: 12 to 17 years old
+IRMARIT - marital status : 1 married, 2 widowed, 3 divorced or seperated, 4 never been married, 99 skip respondent is <14 years old
+CATAG3 - age category: 1 12-17 years old, 2 18-25 years old, 3 26-34 years old, 4 35-49 years old, 5 50 years or older
+NEWRACE2 - race - 1 white, 2 black, 3 native am, 4 native HI, 5 asian, 6 more than one race, 7 hispanic
+GOVTPROG - received any govt assistance(Supplemental Security Income (IRFAMSSI), food stamps (IRFSTAMP), cash assistance (IRFAMPMT), and non-cash assistance (IRFAMSVC)): 1 yes, 2 no
+EMPSTATY - employee status - q employed full time, 2 emloyed part time, 3 unemployed, 4 other(incl., not in labour force)
+HVYDRK2 -
+ALCYR - alcohol past year use - 0 did not use in the past year, 1 used within the past year
+MJOFLAG -
+MJOYR2 - marijuana past year use  , 0
+SUMFLAG
+X dont use PAROLREL- on parrole/supervised release from prisonat any time during the past 12 months: 1 yes, 2 no, 85 bad data, 94 dont know 97 refused, 98 blank
+X dont use PROBATON - ON probationat any time past 12 month: 1 yes, 2 No, 85 bad data, 94 dont know, 97 refused, 98 blank
+BLNTEVER ever smoked cigar with Marijuana in it 1 yes, 2 no, 4 no logically assigned, 11 yes, 85 bad data, 94 dont know, 97 refused, 98 blank
+OTDGNEDL - ever used needlto inject any other drug that was not prescriber - 1 yes, 2 no, 85 bad data, 94 dont kow, 97 refused, 98 blank
+RKFQPBLT - wear a seatbelt when ride  front pass seat of car 1 never, 2 seldom, 3 sometimes, 4 always, 85 bad data, 94 dondt know, 97 refused, 98 blank
+rsksell - approached by someone selling ill drugs past 30 days 1 yes, 2 no, 85 bad data, 94 dont know, 97 refused, 98 blank
+INHOSPYR - stayed overnight as inpt in hosp past 12 mons 1 yes, 2 no, 85 bad data, 94 dont know, 97 refused, 98 blank
+ADDERALL - ever used aderall that was not prescribed 1 yes, 2 no, 85 bad data, 94 dont know, 97 refused, 98 blank
+COLDMEDS - taken a nonpresc cogh med to get high 1 yes, 2 no, 85 bad data, 94 dont know, 97 refused, 98 blank
+
+IV
+any drug
+--types of drug
+--alcohol
+
+DVs
+booked -  ever arrested
+DEPRSYR - had depression in past year 0 no 1 yes
+NOBOOKY2 -  number of times booked in last year
+BKSRVIOL - arrested and booked for violent crime in the last 12 months
+
+--violent non violent
+mental health
+--depression
+--

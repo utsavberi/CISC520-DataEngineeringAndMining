@@ -65,9 +65,9 @@ class AbstractLogitRunner:
             'C(EDUCCAT2)[T.4]': 'Education:CollegeGraduate',
             'C(NEWRACE2)[T.2]': 'Race:NonWhite',
             'C(GOVTPROG)[T.2]': 'RcvdGovtAssistance:No',
-            'C(EMPSTATY)[T.2]': 'EmployementStatus:PartTime',
-            'C(EMPSTATY)[T.3]': 'EmployementStatus:Unemployed',
-            'C(EMPSTATY)[T.4]': 'EmployementStatus:Other(notInLbrForce)',
+            'C(EMPSTATY)[T.2]': 'EmploymentStatus:PartTime',
+            'C(EMPSTATY)[T.3]': 'EmploymentStatus:Unemployed',
+            'C(EMPSTATY)[T.4]': 'EmploymentStatus:Other(notInLbrForce)',
             'C(SUMYR)[T.1]': 'AnyIllicitDrugPastYearUse:Yes',
             'C(MRJYR)[T.1]': 'MarijuanaPastYearUse:Yes'
         }
